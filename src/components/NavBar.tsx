@@ -35,14 +35,16 @@ const NavBar = () => {
   ];
 
   return (
-    <nav className="flex justify-center bg-blueprint-offwhite">
+    <nav className="flex justify-center">
       <div className="flex flex-col justify-between max-lg:flex-grow lg:flex-row lg:w-nav-container-max lg:px-nav-px-desktop">
-        <div className="flex justify-between items-center py-4 px-4 sm:px-0 sm:mx-4">
-          <div className="ml-2">
+        <div className="flex justify-between items-center m-4 rounded-lg sm:px-0 sm:mx-4 bg-blueprint-offwhite 
+                        shadow-[0px_4px_15px_0px_rgba(0,0,0,0.07)] backdrop-blur-xl overflow-hidden">
+                        
+          <div>
             <Logo isDark={isDark} />
           </div>
 
-          <div className="mr-2">
+          <div>
             <MenuButton
               isDark={isDark}
               visibility="lg:hidden"
@@ -51,13 +53,16 @@ const NavBar = () => {
             />
           </div>
         </div>
-        <NavLinks
+        <div className="flex justify-between items-center m-4 rounded-lg sm:px-0 sm:mx-4 bg-blueprint-offwhite 
+                        shadow-[0px_4px_15px_0px_rgba(0,0,0,0.07)] backdrop-blur-xl overflow-hidden">
+        <NavLinks 
           isMenuOpened={isMenuOpened}
           isDark={isDark}
           routes={routes}
           closeMenu={closeMenu}
           currentPath={currentPath}
         />
+        </div>
       </div>
       {/* Comment out button to test dark features */}
       {/* <button  

@@ -17,7 +17,7 @@ const ProjectInfo = { // put project key infor here.
   SECTOR_PLACEHOLDER: "Sustainable Transportation",
 }
 
-const CommonProjectCard = ({project=ProjectInfo}) => { // Change Placeholder Project Info to actual project info once routing is implemented.
+const ProjectCard = ({project=ProjectInfo}) => { // Change Placeholder Project Info to actual project info once routing is implemented.
     // if (!project || !project.tags) {
     //   return null; 
     // }
@@ -88,4 +88,4 @@ const CommonProjectCard = ({project=ProjectInfo}) => { // Change Placeholder Pro
     );
 };
 
-export default CommonProjectCard;
+export default ProjectCard;

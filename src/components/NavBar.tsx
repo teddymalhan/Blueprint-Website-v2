@@ -38,7 +38,7 @@ const NavBar = () => {
     <nav className="w-full p-5 justify-center">
       <div className="flex flex-col gap-4 max-lg:flex-grow lg:flex-row lg:gap-0 lg:items-stretch w-full max-w-[1254px] mx-auto">
       <div className={`flex justify-between items-center rounded-lg 
-                      ${isDark ? 'bg-blueprint-black' : 'bg-blueprint-offwhite'}
+                      ${isDark ? 'bg-blueprint-black' : 'bg-blueprint-white'}
                       shadow-[0px_4px_15px_0px_rgba(0,0,0,0.07)] backdrop-blur-xl overflow-hidden max-lg:pr-4`}>
                       
         <div>
@@ -56,6 +56,7 @@ const NavBar = () => {
       </div>
       <div className="hidden lg:block flex-1" aria-hidden />
       <div className={`flex justify-between items-center rounded-lg 
+                        ${isDark ? 'bg-blueprint-neutral-dark' : 'bg-blueprint-white'}
                       shadow-[0px_4px_15px_0px_rgba(0,0,0,0.07)] backdrop-blur-xl overflow-hidden max-lg:w-full`}>
         <NavLinks
           isMenuOpened={isMenuOpened}
@@ -82,7 +83,7 @@ function MenuButton({ isMenuOpened, visibility, toggleMenu, isDark }) {
   return (
     <button
       className={`${visibility} w-10 h-10 rounded-[7.05px] p-[13px_11px] gap-[9px] flex items-center justify-center transition-colors ${
-        isDark ? 'bg-blueprint-neutral-dark' : 'bg-blueprint-gray-light'
+        isDark ? 'bg-blueprint-neutral-dark' : 'bg-blueprint-white'
       }`}
       onClick={toggleMenu}
       aria-label={isMenuOpened ? "Close menu" : "Open menu"}

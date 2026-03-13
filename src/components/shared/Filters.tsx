@@ -8,8 +8,8 @@ const Filters = ({state,title}: {state: 'outlined' | 'filled', title: string}) =
             // Outlined State
             <button
                 type="button"
-                className="w-fit text-white text-sm font-medium font-['Poppins'] uppercase py-3 px-[18px]
-                md:py-[10px] md:px-[30px] md:rounded-[10px] rounded-[5px] border border-blueprint-white bg-blueprint-white/20"
+                className="w-fit text-zinc-800 text-sm font-medium font-['Poppins'] uppercase py-3 px-[18px]
+                md:py-[10px] md:px-[30px] md:rounded-[10px] rounded-[5px] border border-blueprint-zinc-300 bg-blueprint-white/20"
             >
                 {title}
             </button>
@@ -20,7 +20,7 @@ const Filters = ({state,title}: {state: 'outlined' | 'filled', title: string}) =
             <button className="w-fit text-blueprint-neutral-dark text-sm font-medium font-['Poppins'] uppercase 
             py-3 px-[18px] md:py-[10px] md:px-[30px] md:rounded-[10px] rounded-[5px] bg-blueprint-white">
                     {title}
-                </button>
+            </button>
       
         )
     }

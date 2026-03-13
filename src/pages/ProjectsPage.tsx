@@ -1,6 +1,6 @@
 import React from "react";
 import PageContainer from "../components/layout/PageContainer";
-import ProjectCard from "../components/shared/ProjectCard";
+import ProjectCard  from "../components/projects-page/ProjectProjectCard";
 import Filters from "../components/shared/Filters";
 
 const ProjectsPage = () => {

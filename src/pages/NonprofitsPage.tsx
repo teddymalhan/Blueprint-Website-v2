@@ -19,14 +19,21 @@ const NonprofitsPage = () => {
                         max-[400px]:w-[200px]">
         <strong>partner</strong> with us
         </h1>
+
+      
         {/* Img & Desc container*/}
         <div className="flex flex-row w-[100%] 
                         max-[900px]:flex-col"> 
           <p className="font-poppins font-[400] text-[30px]/[100%] text-black tracking-[-0.6px] 
                         min-[769px]:pr-[30px]
                         max-md:text-[20px]/[140%] max-md:text-blueprint-neutral-dark max-md:tracking-[-0.4px]">
-            by working with us, your organization will <div className={`bg-blueprint-orange ${colouredRectCSSBase} `} /> gain fresh perspectives of your business, <div className={`bg-[#71EC59] ${colouredRectCSSBase} `} /> increase community engagement with local students, 
-            and <div className={`bg-[#D2A6FB]  ${colouredRectCSSBase}`} />  bring your vision for social good to life through innovative ways, all free of charge.
+            by working with us, your organization will{" "}
+            <span className={`bg-blueprint-orange ${colouredRectCSSBase}`} /> gain fresh
+            perspectives of your business,{" "}
+            <span className={`bg-[#71EC59] ${colouredRectCSSBase}`} /> increase community
+            engagement with local students, and{" "}
+            <span className={`bg-[#D2A6FB] ${colouredRectCSSBase}`} /> bring your vision
+            for social good to life through innovative ways, all free of charge.
           </p>
           {/* Polaroid Wrapper */}
           <div className="min-[1025px]:h-0
@@ -43,7 +50,7 @@ const NonprofitsPage = () => {
       {/* Project Traits Section*/}
       <section className="mb-[60px]
                           max-md:mb-[18px]">
-        <div className="flex flex-col gap-6px mb-[30px]"> {/* Text Div */}
+        <div className="flex flex-col gap-[6px] mb-[30px]"> {/* Text Div */}
           <h2 className="text-blueprint-neutral-dark font-poppins font-[600] text-[36px]/[140%] tracking-[-0.72px]
                           max-md:text-[24px]/[110%] max-md:tracking-[-0.48px] max-md:mb-[12px]">
             can your idea become a project?
@@ -81,6 +88,31 @@ const NonprofitsPage = () => {
           <li>3 Clean Finish PLACEHOLDER</li>
         </ol>
       </section>
+    </section>
+
+    {/* What our partners say */}
+    <section className="m-4 mb-[60px]
+                        max-md:mb-[40px]">
+      <h2 className="text-blueprint-neutral-dark font-poppins font-[600] text-[36px]/[140%] tracking-[-0.72px]
+                      max-md:text-[24px]/[110%] max-md:tracking-[-0.48px]">
+        what our partners say
+      </h2>
+
+      <p className="text-black font-caveat font-[400] text-[34px]/[100%] mt-[24px] mb-[24px]
+                    max-md:text-[24px]/[120%] max-md:mt-[18px] max-md:mb-[18px]">
+        [The work SFU Blueprint has done] is much appreciated and there is a lot of thanks that cannot really be simply put into words... Volunteers at OCB put in thousands of hours of work behind the scene to make everything happen. 
+        The tool that you have created for us will streamline our process to better support and facilitate all the volunteers at OCB. Time is a very valuable and finite resource for us at a small non-profit organization and it will allow us to 
+        manage it better and more efficiently.
+      </p>
+
+      <div>
+        <p className="text-black font-poppins font-[400] text-[14px]/[100%] uppercase">
+          CAVAN HUA
+        </p>
+        <p className="text-black font-poppins font-[400] text-[14px]/[100%] uppercase mt-[2px]">
+          VOLUNTEER COORDINATOR AT OCB
+        </p>
+      </div>
     </section>
 
     {/* NPO project proposal */}

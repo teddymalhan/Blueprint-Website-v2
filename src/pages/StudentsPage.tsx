@@ -29,19 +29,19 @@ const ROLES = [
     title: "project manager",
     description:
       "Defining project requirements and timelines, and supporting the team by outlining weekly deliverables and keeping the project on track.",
-    color: "bg-blueprint-orange",
+    color: "#F49F00",
   },
   {
     title: "designer",
     description:
       "Crafting user experiences and interfaces that are intuitive, accessible, and visually aligned with the project's goals.",
-    color: "bg-blueprint-accent-purple",
+    color: "#D2A6FB",
   },
   {
     title: "developer",
     description:
       "Building and implementing the technical solution, writing clean code, and collaborating to bring the design to life.",
-    color: "bg-blueprint-roleAccent-dev",
+    color: "#0177E8",
   },
 ];
 
@@ -151,80 +151,14 @@ const StudentsPage = () => {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full overflow-x-hidden">
       {/* Hero Section - Dark Background */}
-      <section className="relative bg-blueprint-black overflow-hidden">
-        {/* Decorative cross-point background */}
-        <div className="absolute inset-0 pointer-events-none" aria-hidden>
-          {/* Vertical line */}
-          <div className="hidden lg:block absolute right-[calc(50%-287px)] top-0 bottom-0 w-px border-l border-dashed border-blueprint-darkGrey opacity-40" />
-          {/* Horizontal line */}
-          <div className="hidden lg:block absolute left-0 right-0 top-[280px] h-px border-t border-dashed border-blueprint-darkGrey opacity-40" />
-          {/* Concentric arcs (decorative circles) */}
-          <div className="hidden lg:block absolute right-[-200px] top-[-300px]">
-            {/* Small arc */}
-            <div className="absolute right-[80px] top-[320px] w-[382px] h-[382px] rounded-full border border-dashed border-blueprint-darkGrey opacity-30" />
-            {/* Medium arc */}
-            <div className="absolute right-[-100px] top-[140px] w-[734px] h-[734px] rounded-full border border-dashed border-blueprint-darkGrey opacity-30" />
-            {/* Large arc */}
-            <div className="absolute right-[-270px] top-[-30px] w-[1076px] h-[1076px] rounded-full border border-dashed border-blueprint-darkGrey opacity-30" />
-          </div>
-          {/* Colored accent arcs */}
-          <div className="hidden lg:block">
-            <div className="absolute right-[60px] top-[160px] w-[200px] h-[200px]">
-              <svg viewBox="0 0 200 200" fill="none" className="w-full h-full">
-                <path
-                  d="M 200 100 A 100 100 0 0 0 100 0"
-                  stroke="#0146BE"
-                  strokeWidth="3"
-                />
-              </svg>
-            </div>
-            <div className="absolute right-[-40px] top-[380px] w-[200px] h-[200px]">
-              <svg viewBox="0 0 200 200" fill="none" className="w-full h-full">
-                <path
-                  d="M 0 100 A 100 100 0 0 0 100 200"
-                  stroke="#71EC59"
-                  strokeWidth="3"
-                />
-              </svg>
-            </div>
-            <div className="absolute right-[-120px] top-[520px] w-[200px] h-[200px]">
-              <svg viewBox="0 0 200 200" fill="none" className="w-full h-full">
-                <path
-                  d="M 0 100 A 100 100 0 0 1 100 0"
-                  stroke="#D2A6FB"
-                  strokeWidth="3"
-                />
-              </svg>
-            </div>
-          </div>
-          {/* Plus sign at intersection */}
-          <div className="hidden lg:block absolute right-[calc(50%-303px)] top-[264px] w-8 h-8">
-            <svg
-              viewBox="0 0 32 32"
-              fill="none"
-              className="w-full h-full text-blueprint-darkGrey opacity-60"
-            >
-              <line
-                x1="16"
-                y1="4"
-                x2="16"
-                y2="28"
-                stroke="currentColor"
-                strokeWidth="1"
-              />
-              <line
-                x1="4"
-                y1="16"
-                x2="28"
-                y2="16"
-                stroke="currentColor"
-                strokeWidth="1"
-              />
-            </svg>
-          </div>
-        </div>
+      <section className="relative bg-blueprint-black z-5
+                          bg-[url('/images/non-profit/desktop_partner_crosspoint.svg')] bg-no-repeat
+                          min-[1280px]:bg-[calc(100%+585px)_-360px]
+                          max-[1279px]:bg-[calc(100%+689px)_-360px]
+                          max-md:bg-[url('/images/non-profit/mobile_partner_crosspoint.svg')] max-md:bg-[calc(100%+130px)_-132px]">
+
 
         <div className="relative z-10 w-full px-6 md:px-10 xl:px-36 pt-[142px] pb-[100px] max-md:pt-[90px] max-md:pb-[60px]">
           {/* Title + Button row */}
@@ -269,6 +203,7 @@ const StudentsPage = () => {
         </div>
       </section>
 
+      <div>
       {/* Typical Experience Section */}
       <section className="w-full px-6 md:px-10 xl:px-36 pt-[108px] max-md:pt-[60px]">
         {/* Section Intro */}
@@ -277,7 +212,8 @@ const StudentsPage = () => {
             className="font-poppins text-[48px] leading-none tracking-[-0.96px] text-blueprint-black mb-[24px]
                        max-md:text-[28px] max-md:tracking-[-0.56px] max-md:mb-[16px]"
           >
-            <strong className="font-bold">a typical experience</strong>
+            <span className="font-normal">a </span>
+            <strong className="font-bold">typical experience</strong>
             <span className="font-normal"> at sfu blueprint</span>
           </h2>
           <p
@@ -290,15 +226,15 @@ const StudentsPage = () => {
 
         {/* Work with a Team */}
         <div className="mb-[90px] max-md:mb-[50px]">
-          <h3
-            className="font-poppins text-[36px] leading-[1.4] tracking-[-0.72px] text-blueprint-black mb-[40px]
-                       max-md:text-[22px] max-md:tracking-[-0.44px] max-md:mb-[24px]"
-          >
-            work with a team
-          </h3>
+        <h3
+                className="font-poppins text-[36px] leading-[1.4] tracking-[-0.72px] text-blueprint-black font-semibold
+                           max-md:text-[22px] max-md:tracking-[-0.44px]"
+              >
+            <span>work with a team</span>
+              </h3>
 
           {/* Role Cards */}
-          <div className="flex flex-wrap justify-center gap-6 max-md:flex-col max-md:items-center">
+          <div className="flex flex-wrap justify-center items-start gap-6 max-md:flex-col max-md:items-center">
             {ROLES.map((role, index) => (
               <RoleCard
                 key={role.title}
@@ -313,12 +249,12 @@ const StudentsPage = () => {
 
         {/* Work with a Timeline */}
         <div className="mb-[90px] max-md:mb-[50px]">
-          <h3
-            className="font-poppins text-[36px] leading-[1.4] tracking-[-0.72px] text-blueprint-black mb-[24px]
-                       max-md:text-[22px] max-md:tracking-[-0.44px] max-md:mb-[16px]"
-          >
-            {TIMELINE_CONTENT.heading}
-          </h3>
+        <h3
+                className="font-poppins text-[36px] leading-[1.4] tracking-[-0.72px] text-blueprint-black font-semibold
+                           max-md:text-[22px] max-md:tracking-[-0.44px]"
+              >
+                {TIMELINE_CONTENT.heading}
+              </h3>
           <p
             className="font-poppins text-[16px] leading-normal text-blueprint-black max-w-[584px]
                        max-md:text-[14px] max-md:max-w-full"
@@ -373,6 +309,7 @@ const StudentsPage = () => {
 
       {/* The Application Process Section */}
       <ApplicationProcessSection />
+      </div>
 
       {/* Open Positions Section */}
       <section
@@ -627,41 +564,26 @@ type RoleCardProps = {
 };
 
 function RoleCard({ title, description, color, offset }: RoleCardProps) {
-  // Stagger cards vertically on desktop for the cascading effect
   const offsetClass =
-    offset === 0
-      ? "lg:mt-[124px]"
-      : offset === 1
-        ? "lg:mt-[66px]"
-        : "lg:mt-0";
+    offset === 0 ? "lg:mt-[120px]" : offset === 1 ? "lg:mt-[58px]" : "lg:mt-0";
 
   return (
     <div
-      className={`w-[300px] max-md:w-[240px] bg-white rounded-xl overflow-hidden flex flex-col ${offsetClass}`}
+      className={`w-[276px] max-md:w-[263px] bg-white rounded-[16px] flex flex-col p-[12px] gap-[65px] ${offsetClass}`}
     >
-      {/* Colored header with wave shape */}
-      <div className={`relative h-[116px] ${color} overflow-hidden`}>
-        <svg
-          viewBox="0 0 300 116"
-          fill="none"
-          preserveAspectRatio="none"
-          className="absolute bottom-0 left-0 w-full"
-        >
-          <path
-            d="M0 116 L0 80 Q50 116 150 95 Q250 74 300 90 L300 116 Z"
-            fill="white"
-          />
+      {/* Colored header */}
+      <div className="relative h-[144px] w-full">
+        <svg viewBox="0 0 275 144" fill="none" preserveAspectRatio="none" className="absolute inset-0 w-full h-full">
+          <path d="M16.1151 143.798L261.115 125.535C268.945 124.951 275 118.428 275 110.576L275 9.99995C275 4.4771 270.523 -6.06438e-05 265 -6.01609e-05L10 -3.78681e-05C4.47716 -3.73853e-05 1.82327e-05 4.47711 1.87155e-05 9.99995L2.91048e-05 128.84C2.98675e-05 137.564 7.41568 144.447 16.1151 143.798Z" fill={color} />
         </svg>
-        <p className="relative z-10 font-poppins text-white text-[20px] font-medium p-4 max-md:text-[16px]">
+        <p className="relative z-10 font-poppins text-white text-[30px] font-semibold leading-none tracking-[-0.6px] p-[23px] max-md:text-[22px]">
           {title}
         </p>
       </div>
       {/* Description */}
-      <div className="p-5 pt-2 flex-1">
-        <p className="font-poppins text-[13px] leading-relaxed text-blueprint-black max-md:text-[12px]">
-          {description}
-        </p>
-      </div>
+      <p className="font-poppins text-[16px] leading-normal text-blueprint-black max-md:text-[14px]">
+        {description}
+      </p>
     </div>
   );
 }

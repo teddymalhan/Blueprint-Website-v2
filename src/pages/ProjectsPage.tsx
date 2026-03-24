@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { useState } from "react";
 import PageContainer from "../components/layout/PageContainer";
 import ProjectCard from "../components/projects-page/ProjectProjectCard";
 import Filters from "../components/shared/Filters";
+import ProjectsCTA from "../components/shared/ProjectsCTA";
 
 const ProjectsPage = () => {
   const filterNames = ["Web-App", "Website", "Plug-In"] as const;
@@ -15,15 +17,15 @@ const ProjectsPage = () => {
                               max-md:bg-[url('/images/non-profit/mobile_partner_crosspoint.svg')] max-md:bg-[calc(100%+130px)_-132px]"
     >
       {/* Main Container Flex Column */}
-      <div className="flex flex-col gap-4 items-center justify-center">
-        {/* Title — desktop/heading/m-reg */}
+      <div className="flex flex-col gap-4 items-center justify-center pb-ppcard-bottom pt-main-top">
+        {/* Title */}
         <h1 className="text-center font-poppins text-blueprint-heading text-heading-m-reg-mobile desktop:text-heading-m-reg">
           our projects
         </h1>
 
-        {/* Filters — light variant for light gray / patterned background (Figma) */}
+        {/* Filters */}
         <div
-          className="flex flex-row flex-wrap gap-[10px] items-center justify-center"
+          className="flex flex-row flex-wrap gap-[10px] items-center justify-center pt-[42px] pb-[84px]"
           role="group"
           aria-label="Project type filters"
         >
@@ -39,20 +41,19 @@ const ProjectsPage = () => {
           ))}
         </div>
 
-        {/* Projects Flex Row  Max 2 cards per row*/}
-        <div className="flex flex-row gap-4 items-center justify-center">
-          <div className="flex flex-row gap-4 items-center justify-center">
-            <ProjectCard />
-          </div>
-          {/*
-              <div className="flex flex-col gap-4 items-center justify-center">
-                <ProjectCard />
-                <ProjectCard />
-              </div> */}
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 min-[962px]:grid-cols-2 gap-x-[42px] gap-y-9 w-full max-w-[1280px]">
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
         </div>
       </div>
-      {/* CTA Button - Absolute Positioned Centered */}
-      <div />
+
+      {/* CTA */}
+      <div className="sticky bottom-0 left-0 right-0 z-20 flex justify-center pt-4 pb-4">
+        <ProjectsCTA />
+      </div>
     </PageContainer>
   );
 };

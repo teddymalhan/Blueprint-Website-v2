@@ -11,7 +11,7 @@ body {
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #FCFCFC;
+  background-color: #F3F3F3;
 }
 
 @layer components{

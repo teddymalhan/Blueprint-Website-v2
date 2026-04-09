@@ -42,7 +42,7 @@ export default function FooterRevamp() {
     <footer id="app-footer" className="w-full font-poppins">
       {/* Desktop */}
       <div className="hidden lg:block px-footer-px-desktop py-footer-py-desktop">
-        <div className="rounded-[20px] pl-[80px] pr-[140px] pt-[60px] pb-[100px] bg-white">
+        <div className="rounded-[20px] px-[80px] pt-[60px] pb-[100px] bg-white">
           <div className="flex flex-col gap-[70px]">
             {/* Top section */}
             <div className="flex flex-col gap-[48px]">
@@ -60,10 +60,10 @@ export default function FooterRevamp() {
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-[33px] h-[27px] hover:opacity-70 transition-opacity"
+                      className={`${social.name === "Discord" ? "w-[33px] h-[28px]" : "w-[33px] h-[27px]"} text-blueprint-darkGrey hover:text-blueprint-black transition-colors`}
                       aria-label={social.name}
                     >
-                      <social.icon className="w-full h-full" style={{ fill: '#2A2A2A' }} />
+                      <social.icon className="w-full h-full" />
                     </a>
                   ))}
                 </div>
@@ -75,7 +75,7 @@ export default function FooterRevamp() {
                   <p className="font-poppins text-heading-m-reg text-blueprint-black">
                     tech for
                   </p>
-                  <p className="font-caveat font-bold text-[80px] leading-[0.8] tracking-[-2.4px] text-black">
+                  <p className="font-caveat font-bold text-[80px] leading-[0.7] tracking-[-2.4px] text-blueprint-black">
                     social good
                   </p>
                 </div>
@@ -122,10 +122,10 @@ export default function FooterRevamp() {
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-[27px] h-[22px] hover:opacity-70 transition-opacity"
+                      className={`${social.name === "Discord" ? "w-[27px] h-[23px]" : "w-[27px] h-[22px]"} text-blueprint-darkGrey hover:text-blueprint-black transition-colors`}
                       aria-label={social.name}
                     >
-                      <social.icon className="w-full h-full" style={{ fill: '#2A2A2A' }} />
+                      <social.icon className="w-full h-full" />
                     </a>
                   ))}
                 </div>
@@ -136,7 +136,7 @@ export default function FooterRevamp() {
                 <p className="font-poppins text-heading-m-reg text-blueprint-black">
                   tech for
                 </p>
-                <p className="font-caveat font-bold text-[60px] leading-[0.8] tracking-[-1.8px] text-black">
+                <p className="font-caveat font-bold text-[60px] leading-[0.7] tracking-[-1.8px] text-blueprint-black">
                   social good
                 </p>
               </div>
@@ -169,7 +169,7 @@ export default function FooterRevamp() {
         <div className="rounded-[16px] px-[28px] pt-[36px] pb-[48px] bg-white">
           <div className="flex flex-col gap-[36px]">
             {/* Logo */}
-            <div className="flex flex-col gap-[20px]">
+            <div className="flex flex-col gap-[44px]">
               <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
                 <LogoIcon className="w-[23px] h-[21px]" style={{ fill: '#0146BE' }} />
                 <span className="text-footer-logo-mobile text-blueprint-navyblue">blueprint</span>
@@ -180,7 +180,7 @@ export default function FooterRevamp() {
                 <p className="font-poppins text-mobile-heading-m-reg text-blueprint-black">
                   tech for
                 </p>
-                <p className="font-caveat font-bold text-[44px] leading-[0.8] tracking-[-1.32px] text-black">
+                <p className="font-caveat font-bold text-[44px] leading-[0.7] tracking-[-1.32px] text-blueprint-black">
                   social good
                 </p>
               </div>
@@ -194,10 +194,10 @@ export default function FooterRevamp() {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-[27px] h-[22px] hover:opacity-70 transition-opacity"
+                  className={`${social.name === "Discord" ? "w-[27px] h-[23px]" : "w-[27px] h-[22px]"} text-blueprint-darkGrey hover:text-blueprint-black transition-colors`}
                   aria-label={social.name}
                 >
-                  <social.icon className="w-full h-full" style={{ fill: '#2A2A2A' }} />
+                  <social.icon className="w-full h-full" />
                 </a>
               ))}
             </div>
